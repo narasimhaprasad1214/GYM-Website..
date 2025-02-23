@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad Fitness</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+            font-family: Arial, sans-serif;
+            background: url('img.jpg') no-repeat center center/cover;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .left img {
+            width: 120px;
+            border-radius: 5px;
+        }
+
+        .left div {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .mid .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar li {
+            list-style: none;
+        }
+
+        .navbar li a {
+            color: wheat;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a:active {
+            text-decoration: underline;
+            color: grey;
+        }
+
+        .btn {
+            margin: 0 5px;
+            background-color: black;
+            color: cyan;
+            padding: 8px 12px;
+            border: 2px solid grey;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: magenta;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        input[type="submit"],
+        button[type="submit"] {
+            background-color: cyan;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        button[type="submit"]:hover {
+            background-color: magenta;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .mid .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="Gym logo.jpg" alt="Gym Logo">
+            <div>Prasad Fitness</div>
+        </div>
+
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Join the Best Gym in Delhi</h2>
+        <form action="https://formspree.io/f/xvgznraq" method="POST">
+            <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Contact Us Directly</h2>
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/xvgznraq" method="POST">
+            <label>
+                Your email:
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Your message:
+                <textarea name="message" placeholder="Write your message here..." required></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+
+</html>
